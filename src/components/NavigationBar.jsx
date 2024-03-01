@@ -22,29 +22,35 @@ const NavigationBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link className="nav-link" aria-current="page" to="/">
-              Home
-            </Link>
-            <Link className="nav-link" to="/userprofile">
-              Profile
-            </Link>
-            <Link className="nav-link" to="/wallet/current-investments">
-              Investments
-            </Link>
-            <Link className="nav-link" to="/wallet/balance">
-              Balance
-            </Link>
-            <div className="ms-auto">
-              <Link to="/cart">
-                <button type="button" className="btn btn-primary">
-                  <span className="bi bi-cart pe-1"></span>
-                  <span className="badge badge-pill bg-danger">
-                    {cartCount}
-                  </span>
-                </button>
+          <ul className="navbar-nav me-auto">
+            <li>
+              <Link className="nav-link" aria-current="page" to="/">
+                Home
               </Link>
-            </div>
+            </li>
+            <li>
+              <Link className="nav-link" to="/userprofile">
+                Profile
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/wallet/current-investments">
+                Investments
+              </Link>
+            </li>
+            <li>
+              <Link className="nav-link" to="/wallet/balance">
+                Balance
+              </Link>
+            </li>
+          </ul>
+          <div className="w-auto">
+            <Link to="/cart">
+              <button type="button" className="btn btn-primary">
+                <span className="bi bi-cart pe-1"></span>
+                <span className="badge badge-pill bg-danger">{cartCount}</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
